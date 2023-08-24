@@ -6,14 +6,14 @@ from datetime import datetime, date, time
 class Businesses:
     name: str
     email: str
-coordinates: Point
+    coordinates: Point
     opening_hours: 'Business_hours'
 
 @dataclasses.dataclass
 class LostRequest:
     description: str
     email: str
-polygon: List[Point]
+    polygon: List[Point]
     request_date: date
     lost_time: time
 
