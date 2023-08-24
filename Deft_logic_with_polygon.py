@@ -13,7 +13,7 @@ class Businesses:
 class LostRequest:
     description: str
     email: str
-    polygon: List[Tuple[float, float]]  # List of coordinates representing the polygon
+polygon: List[Point]
     request_date: date
     lost_time: time
 
