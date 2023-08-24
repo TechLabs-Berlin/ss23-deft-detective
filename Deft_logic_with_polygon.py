@@ -6,7 +6,7 @@ from datetime import datetime, date, time
 class Businesses:
     name: str
     email: str
-    coordinates: Tuple[float, float]
+coordinates: Point
     opening_hours: 'Business_hours'
 
 @dataclasses.dataclass
