@@ -1,27 +1,33 @@
-import React, { useState } from 'react';
-import './App.css';
-import SubmitRequestForm from './components/SubmitRequestForm';
+import React, { useEffect, useState } from 'react'
 
 function App() {
-  const [showSubmitForm, setShowSubmitForm] = useState(false);
 
-  const handleReportLostClick = () => {
-    setShowSubmitForm(true);
-  };
+  const [backendData, setBackendData] = useState([{}])
+
+  useEffect(() => {
+    fetch("/api").then(
+      response => response.json()
+    ).then(
+      data => {
+        setBackendData(data)
+      }
+    )
+  }, [])
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Deft Detective</h1>
-        <p>Report Lost Items and Help Others Find Them!</p>
-        {showSubmitForm ? (
-          <SubmitRequestForm />
-        ) : (
-          <button onClick={handleReportLostClick}>I Want to Report Something Lost!</button>
-        )}
-      </header>
+    <div>
+
+      {(typeof backendData.users === 'undefined') ? (
+        <p>Loading...</p>
+      ) : (
+        backendData.users.map((user, i) => (
+          <p key={i}>{user}</p>
+        ))
+      )}
+
+
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
