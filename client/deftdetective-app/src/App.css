@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #eaa642;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.landing-page {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+/* .logo img {
+  max-width: 100px;
+} */
+
+h1 {
+  font-size: 24px;
+  margin: 20px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lets-go-button {
+  background-color: #007bff;
+  /* Blue color, you can change this */
+  color: #fff;
+  /* Text color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.lets-go-button:hover {
+  background-color: #0056b3;
+  /* Darker blue on hover */
+}
+
+.login-button {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.login-button a {
+  color: #007bff;
+  /* Blue color for the link */
+  text-decoration: none;
+}
+
+.login-button a:hover {
+  text-decoration: underline;
+  /* Underline the link on hover */
+}
+
+.circle {
+  width: 100px;
+  /* Adjust the size as needed */
+  height: 100px;
+  /* Adjust the size as needed */
+  background-color: #007BFF;
+  /* Set the background color of the circle */
+  border-radius: 50%;
+  /* Make it a circle */
+  margin: 0 auto;
+  /* Center the circle horizontally */
+}
+
+/* Style for the text "Deft Detective" */
+.landing-page .logo span {
+  display: block;
+  /* Display the text on a new line */
+  text-align: center;
+  /* Center the text */
+  font-size: 24px;
+  /* Adjust the font size as needed */
+  margin-top: 10px;
+  /* Adjust the space between the circle and text */
 }
