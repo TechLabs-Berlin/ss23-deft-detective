@@ -6,7 +6,6 @@ function App() {
   return (
     <div className="landing-page">
       <div className="logo">
-        {/* Create a circle using CSS */}
         <div className="circle"></div>
       </div>
       <h1>Deft Detective</h1>

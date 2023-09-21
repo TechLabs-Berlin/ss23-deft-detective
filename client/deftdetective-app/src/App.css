@@ -23,10 +23,8 @@ h1 {
 }
 
 .lets-go-button {
-  background-color: #007bff;
-  /* Blue color, you can change this */
+  background-color: #2b65a0;
   color: #fff;
-  /* Text color */
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -36,8 +34,7 @@ h1 {
 }
 
 .lets-go-button:hover {
-  background-color: #0056b3;
-  /* Darker blue on hover */
+  background-color: #234e78;
 }
 
 .login-button {
@@ -46,37 +43,25 @@ h1 {
 }
 
 .login-button a {
-  color: #007bff;
-  /* Blue color for the link */
+  color: #2b65a0;
   text-decoration: none;
 }
 
 .login-button a:hover {
   text-decoration: underline;
-  /* Underline the link on hover */
 }
 
 .circle {
   width: 100px;
-  /* Adjust the size as needed */
   height: 100px;
-  /* Adjust the size as needed */
-  background-color: #007BFF;
-  /* Set the background color of the circle */
+  background-color: #494d52;
   border-radius: 50%;
-  /* Make it a circle */
   margin: 0 auto;
-  /* Center the circle horizontally */
 }
 
-/* Style for the text "Deft Detective" */
 .landing-page .logo span {
   display: block;
-  /* Display the text on a new line */
   text-align: center;
-  /* Center the text */
   font-size: 24px;
-  /* Adjust the font size as needed */
   margin-top: 10px;
-  /* Adjust the space between the circle and text */
 }
