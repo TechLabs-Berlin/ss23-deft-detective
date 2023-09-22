@@ -1,18 +1,29 @@
-import React from 'react';
-import './App.css';
-
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+// import  Preview  from './pages/Preview'
+// import  SignUp  from './pages/SignUp'
+// import  SubmitMessage  from './pages/SubmitMessage'
+import What from './pages/What'
+// import  When  from './pages/When'
+// import  Where  from './pages/Where'
+// import  Navbar from '.components/Navbar'
+// import  Stepbar  from '.components/Stepbar'
 
 function App() {
   return (
-    <div className="landing-page">
-      <div className="logo">
-        <div className="circle"></div>
-      </div>
-      <h1>Deft Detective</h1>
-      <button className="lets-go-button">Let's Go</button>
-      <p className="login-button">Already a user? <a href="/login">Log in!</a></p>
-    </div>
-  );
+    <>
+      {/* <Navbar /> */}
+      <Routes>
+        <Route path='/' element={<Home />} />'
+        {/* <Route path='preview' element={<Preview />} />'
+        <Route path='signup' element={<SignUp />} />'
+        <Route path='submitmessage' element={<SubmitMessage />} />' */}
+        <Route path='what' element={<What />} />'
+        {/* <Route path='when' element={<When />} />'
+        <Route path='where' element={<Where />} />' */}
+      </Routes>
+    </>
+  )
 }
 
 export default App;
