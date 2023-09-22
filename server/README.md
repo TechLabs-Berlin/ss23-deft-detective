@@ -8,10 +8,10 @@ The logic includes:
 
 - [x] "Boiler plate"/pkg setup
 - [x] "CI" scripts
-- [ ] `filter.py` with filter by geolocation
-    - [ ] data models, e.g. `Point`
-    - [ ] `Places` class
-        - [ ] search_by_polygon
+- [x] `base.py` with filter by geolocation
+    - [x] data models, e.g. `Point`
+    - [x] `SearchPlaces` class
+        - [x] find_by_geolocation
 - [ ] `httpserver.py`:
     - [ ] http interface
     - [ ] SerDe geojson <> Polygon
@@ -41,4 +41,10 @@ pip install pip setuptools --upgrade
 
 ```commandline
 pip install -e '.[dev]'
+```
+
+4. Run to perform unit tests:
+
+```commandline
+make tests
 ```
