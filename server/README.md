@@ -7,7 +7,7 @@ The logic includes:
 ## Roadmap
 
 - [x] "Boiler plate"/pkg setup
-- [ ] "CI" scripts
+- [x] "CI" scripts
 - [ ] `filter.py` with filter by geolocation
     - [ ] data models, e.g. `Point`
     - [ ] `Places` class
@@ -20,6 +20,11 @@ The logic includes:
 
 ## How to contribute
 
+### Prerequisites
+
+- Python >= 3.10, <3.12
+- [gnuMake](https://www.gnu.org/software/make/) (alternatively, cmake)
+
 1. Create a virtual env.
 
 ```commandline
@@ -30,4 +35,10 @@ python -m venv .venv && source .venv/bin/activate
 
 ```commandline
 pip install pip setuptools --upgrade
+```
+
+3. Install the package with 'dev' requirements in the editable mode:
+
+```commandline
+pip install -e '.[dev]'
 ```

@@ -18,3 +18,11 @@ dynamic = ["version"]
 
 [tool.setuptools.dynamic]
 version = { attr = "deft_detective.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["deft_detective*"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest~=7.4.0",
+]
