@@ -1,17 +1,7 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom'
-import './Home.css';
-
-
-export const Home = () => {
-    const navigate = useNavigate()
-    return (
-        <>
-            <div>HomePage</div>
-            <button onClick={() => navigate('what')}>What</button>
-        </>
-    )
-}
+// import React from 'react';
+// import { useNavigate } from 'react-router-dom'
+// import './Home.css';
+// import { Link } from "react-router-dom";
 
 // function Home() {
 //     return (
@@ -21,9 +11,20 @@ export const Home = () => {
 //             </div>
 //             <h1>Deft Detective</h1>
 //             <button className="lets-go-button">Let's Go</button>
-//             <p className="login-button">Already a user? <a href="/login">Log in!</a></p>
+//             <p className="login-button">Already a user? <a href="/what">Log in!</a></p>
 //         </div>
 //     );
 // }
 
-export default Home;
+// export default Home;
+
+import { Link } from "react-router-dom"
+
+export function Home() {
+    return (
+        <>
+            <h1>First Page (Landing Page)</h1>
+            <Link to="/what"><button>Let's Go!</button></Link>
+        </>
+    )
+}

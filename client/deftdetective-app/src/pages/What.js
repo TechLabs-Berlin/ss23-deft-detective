@@ -1,11 +1,10 @@
-import React from 'react'
-import What from './What.css'
+import { Link } from "react-router-dom"
 
-export const what = () => {
+export function What() {
     return (
-        <div> Why isn't this showing? </div>
-
+        <>
+            <h1>What</h1>
+            <Link to="/when"><button>Next</button></Link>
+        </>
     )
 }
-
-export default What;
