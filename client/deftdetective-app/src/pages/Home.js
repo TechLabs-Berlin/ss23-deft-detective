@@ -13,18 +13,25 @@
 //             <button className="lets-go-button">Let's Go</button>
 //             <p className="login-button">Already a user? <a href="/what">Log in!</a></p>
 //         </div>
-//     );
-// }
-
-// export default Home;
 
 import { Link } from "react-router-dom"
+import './Home.css';
 
 export function Home() {
     return (
         <>
-            <h1>First Page (Landing Page)</h1>
-            <Link to="/what"><button>Let's Go!</button></Link>
+            <div className="landing-page">
+                <div className="logo">
+                    <div className="circle"></div>
+                </div>
+                <h2>Email nearby businesses about your lost item in just three easy steps</h2>
+                <div className="stepscircle">
+                    <div className="circle-small">1</div>
+                    <div className="circle-small">2</div>
+                    <div className="circle-small">3</div>
+                </div>
+                <Link to="/what"><button className="lets-go-button" >Let's Go!</button></Link>
+            </div>
         </>
     )
 }

@@ -1,17 +1,53 @@
 body {
-  margin: 0;
+  margin: 100px;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #eaa642;
+  background-color: #e2b470;
 }
 
-h1 {
+.landing-page {
+  display: block;
+  text-align: center;
   font-size: 24px;
-  margin: 20px 0;
+  margin-top: 10px;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: #678fc0;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 17px;
+  margin: 40px 0;
+}
+
+.stepscircle {
+  display: flex;
+  margin: 30px 0;
+}
+
+.circle-small {
+  width: 50px;
+  height: 50px;
+  background-color: #9061c9;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.circle-small h3 {
+  font-size: 12px;
+}
+
+.lets-go-button:hover {
+  background-color: #234e78;
 }
 
 .lets-go-button {
-  background-color: #2b65a0;
+  background-color: #3772ae;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -19,37 +55,4 @@ h1 {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
-
-.lets-go-button:hover {
-  background-color: #234e78;
-}
-
-.login-button {
-  margin-top: 20px;
-  font-size: 16px;
-}
-
-.login-button a {
-  color: #2b65a0;
-  text-decoration: none;
-}
-
-.login-button a:hover {
-  text-decoration: underline;
-}
-
-.circle {
-  width: 100px;
-  height: 100px;
-  background-color: #494d52;
-  border-radius: 50%;
-  margin: 0 auto;
-}
-
-.landing-page .logo span {
-  display: block;
-  text-align: center;
-  font-size: 24px;
-  margin-top: 10px;
 }
