@@ -98,7 +98,7 @@ export function What() {
                                 />
                             </label>
                         </div>
-                        <Link to="/when"><button className="next">Next</button></Link>
+                        <Link to="/when"><button className="next" type="submit">Next</button></Link>
                     </form>
                 </div>
             </div>
