@@ -28,3 +28,23 @@ back:hover {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+.timeOptionText {
+    font-size: 8px;
+}
+
+.timeOption {
+    display: flex;
+    flex-direction: row;
+}
+
+label>span {
+    width: 90px;
+}
+
+.buttons {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
