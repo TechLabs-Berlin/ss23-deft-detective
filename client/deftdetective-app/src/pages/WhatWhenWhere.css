@@ -45,6 +45,7 @@ body {
 }
 
 .circle-navlogo {
+    display: flex;
     position: relative;
     margin-bottom: 80px;
     justify-content: flex-start;
