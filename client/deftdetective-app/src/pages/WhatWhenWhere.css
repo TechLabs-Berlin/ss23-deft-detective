@@ -1,0 +1,117 @@
+body {
+    margin: 10px;
+    font-family: Arial, sans-serif;
+    background-color: #e2b470;
+}
+
+.navbar {
+    display: flex;
+}
+
+.circle-small-two {
+    width: 50px;
+    height: 50px;
+    background-color: #a98dcc;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.circle-small-three {
+    width: 50px;
+    height: 50px;
+    background-color: #a98dcc;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.circle-small-one {
+    width: 70px;
+    height: 70px;
+    background-color: #a98dcc;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.stepscircle h3 {
+    font-size: 20px;
+    color: white;
+}
+
+.what-page {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.circle-navlogo {
+    position: relative;
+    margin-bottom: 80px;
+    justify-content: flex-start;
+    width: 40px;
+    height: 40px;
+    background-color: #678fc0;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 12px;
+    /* margin-top: 0; */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 35px;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+label>span {
+    width: 150px;
+    text-align: left;
+}
+
+label>input[type="text"],
+label>input[type="date"],
+label>input[type="time"],
+label>input[type="email"],
+label>select,
+label>textarea {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form>div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.next:hover {
+    background-color: #234e78;
+}
+
+.next {
+    background-color: #3772ae;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
