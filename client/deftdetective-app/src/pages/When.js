@@ -37,7 +37,7 @@ export function When() {
     return (
         <>
             <nav className="navbar"><div className="circle-navlogo"></div></nav>
-            <div className="what-page">
+            <div className="container">
                 <div className="stepscircle">
                     <div className="circle-small-one-2"><h3>1</h3></div>
                     <div className="circle-small-two-2"><h3>2</h3></div>
@@ -155,5 +155,5 @@ export function When() {
     )
 }
 
-// TO DO: Date Range + Time Radio
+
 

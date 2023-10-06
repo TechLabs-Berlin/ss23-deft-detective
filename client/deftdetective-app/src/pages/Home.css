@@ -5,11 +5,12 @@ body {
   background-color: #e2b470;
 }
 
-.landing-page {
+.container {
   display: block;
   text-align: center;
   font-size: 24px;
   margin-top: 200px;
+  width: 95%;
 }
 
 .circle {

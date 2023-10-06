@@ -6,8 +6,8 @@ import { Where } from "./pages/Where"
 import { Preview } from "./pages/Preview"
 import { SignUp } from "./pages/SignUp"
 import { SubmitMessage } from "./pages/SubmitMessage"
-// import MapPage from './components/Map'
-// import CoordinatesDisplay from './components/CoordinatesDisplay'
+import Register from './components/Register'
+import Login from './components/Login'
 
 function App() {
   return (
@@ -16,17 +16,44 @@ function App() {
       <Route path="/what" element={<What />} />
       <Route path="/when" element={<When />} />
       <Route path="/where" element={<Where />} />
-      {/* <Route path="/where" element={<MapPage />} />
-          <Route path="/where" element={<CoordinatesDisplay />} />
-          <Route path="/auth" element={<Register />}>
-            <Route index element={<Login />} />
-          </Route> */}
       <Route path="/preview" element={<Preview />} />
       <Route path="/SignUp" element={<SignUp />} />
+      <Route path="/SignUp" element={<Register />}>
+        <Route index element={<Login />} />
+      </Route>
       <Route path="/SubmitMessage" element={<SubmitMessage />} />
-
     </Routes>
   )
 }
 
 export default App
+
+
+// -----------------------------------------------------------
+
+// import './App.css'
+// import { BrowserRouter, Routes, Route } from "react-router-dom"
+// import Register from './components/Register'
+// import Login from './components/Login'
+// import Homepage from './Homepage'
+// import MapPage from './components/Map'
+// import CoordinatesDisplay from './components/CoordinatesDisplay'
+
+// function App() {
+//   return (
+//     <>
+//       <BrowserRouter>
+//         <Routes>
+//           <Route path="/" element={<Homepage />} />
+//           <Route path="/where" element={<MapPage />} />
+//           <Route path="/where" element={<CoordinatesDisplay />} />
+//           <Route path="/auth" element={<Register />}>
+//             <Route index element={<Login />} />
+//           </Route>
+//         </Routes>
+//       </BrowserRouter>
+//     </>
+//   );
+// }
+
+// export default App;

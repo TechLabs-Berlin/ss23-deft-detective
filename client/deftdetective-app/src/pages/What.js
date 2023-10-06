@@ -44,7 +44,7 @@ export function What() {
     return (
         <>
             <nav className="navbar"><div className="circle-navlogo"></div></nav>
-            <div className="what-page">
+            <div className="container">
                 <div className="stepscircle">
                     <div className="circle-small-one"><h3>1</h3></div>
                     <div className="circle-small-two"><h3>2</h3></div>

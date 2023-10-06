@@ -4,10 +4,8 @@ import './Home.css';
 export function Home() {
     return (
         <>
-            <div className="landing-page">
-
+            <div className="container">
                 <div className="circle"></div>
-
                 <h2>Email nearby businesses about your lost item in just three easy steps</h2>
                 <div className="stepscircle">
                     <div className="circle-small"><h3>1</h3></div>
