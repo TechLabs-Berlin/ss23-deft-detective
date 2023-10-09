@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import React, { useState } from 'react';
+import './style.css';
+import Logo from '../images/Logo.png';
 import './WhatWhenWhere.css';
 
 export function What() {
@@ -43,21 +45,22 @@ export function What() {
 
     return (
         <>
-            <nav className="navbar"><div className="circle-navlogo"></div></nav>
-            <div className="container">
+            <div><img src={Logo} alt="Logo" className="CornerLogo" /></div>
+            <div className="containerQuestion">
                 <div className="stepscircle">
-                    <div className="circle-small-one"><h3>1</h3></div>
-                    <div className="circle-small-two"><h3>2</h3></div>
-                    <div className="circle-small-three"><h3>3</h3></div>
+                    <div className="circlenumber-big"><h3>1</h3></div>
+                    <div className="circlenumber-small"><h3>2</h3></div>
+                    <div className="circlenumber-small"><h3>3</h3></div>
                 </div>
-                <h1>What?</h1>
-                <h2>Let us know what's missing. Be as specific as you can.</h2>
-                <div className="what-submit">
+                <h1 className="question">What?</h1>
+                <h2 className="questiondescription">Let us know what's missing. Be as specific as you can.</h2>
+                <div className="information">
                     <form onSubmit={handleSubmit}>
                         <div>
-                            <p>Item Name</p>
+                            <p className="value">Item Name*</p>
                             <label>
                                 <input
+                                    className="smallInput"
                                     type="text"
                                     name="itemName"
                                     value={formData.itemName}
@@ -67,8 +70,9 @@ export function What() {
                             </label>
                         </div>
                         <div>
-                            <p>Description</p>
+                            <p className="value">Description</p>
                             <label><textarea
+                                className="bigInput"
                                 name="description"
                                 value={formData.description}
                                 onChange={handleInputChange}

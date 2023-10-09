@@ -1,5 +1,6 @@
 import Login from "../components/Login"
 import Register from "../components/Register"
+import './style.css';
 
 export function SignUp() {
     return (

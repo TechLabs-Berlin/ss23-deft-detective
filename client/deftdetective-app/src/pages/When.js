@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import React, { useState } from 'react';
+import './style.css';
+import Logo from '../images/Logo.png';
 import './WhatWhenWhere.css';
 import './When.css';
 
@@ -36,19 +38,19 @@ export function When() {
 
     return (
         <>
-            <nav className="navbar"><div className="circle-navlogo"></div></nav>
-            <div className="container">
+            <img src={Logo} alt="Logo" className="CornerLogo" />
+            <div className="containerQuestion">
                 <div className="stepscircle">
-                    <div className="circle-small-one-2"><h3>1</h3></div>
-                    <div className="circle-small-two-2"><h3>2</h3></div>
-                    <div className="circle-small-three"><h3>3</h3></div>
+                    <div className="circlenumber-small"><h3>1</h3></div>
+                    <div className="circlenumber-big"><h3>2</h3></div>
+                    <div className="circlenumber-small"><h3>3</h3></div>
                 </div>
-                <h1>When?</h1>
-                <h2>Share the occurence date and time if available, or simply provide a time frame.</h2>
-                <div className="what-submit">
+                <h1 className="question">When?</h1>
+                <h2 className="questiondescription">Share the occurence date and time if available, or simply provide a time frame.</h2>
+                <div className="what-information">
                     <form onSubmit={handleSubmit}>
                         <div>
-                            <p>Date</p>
+                            <p className="value">Date*</p>
                             <label>
                                 <input
                                     type="date"
@@ -67,7 +69,7 @@ export function When() {
                                 />
                             </label>
                         </div>
-                        <p>Time</p>
+                        <p className="value">Time</p>
                         <div className="timeOption">
                             <label>
                                 <input
