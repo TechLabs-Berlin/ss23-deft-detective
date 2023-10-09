@@ -37,7 +37,7 @@ body {
     color: white;
 }
 
-.what-page {
+.container {
     display: block;
     text-align: center;
     font-size: 24px;
@@ -45,6 +45,7 @@ body {
 }
 
 .circle-navlogo {
+    display: flex;
     position: relative;
     margin-bottom: 80px;
     justify-content: flex-start;
@@ -68,7 +69,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 35px;
+    padding: 5%;
 }
 
 label {
@@ -98,7 +99,7 @@ label>textarea {
 form>div {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+
 }
 
 .next:hover {

@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Outlet } from "react-router-dom"
 import axios from "axios"
+import { Link } from "react-router-dom"
 
 
 const API_URL = process.env.REACT_APP_SERVER_URL || "http://localhost:1000"
@@ -37,7 +38,7 @@ function Register() {
         <label>Password:</label>
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
 
-        <button type="submit" onClick={(e) => handleSubmit(e)}>Create my account</button>
+        <Link to="/submitmessage"><button type="submit" onClick={(e) => handleSubmit(e)}>Create my account</button></Link>
         {register ? (
           <p className="text-success">You Are Registered Successfully</p>
         ) : (

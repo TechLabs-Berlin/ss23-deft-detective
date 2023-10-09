@@ -1,3 +1,15 @@
+
 export function SubmitMessage() {
-    return <h1>SubmitMessage</h1>
+    return (
+        <>
+            <div className="container">
+                <h1>Submitted!</h1>
+                <h2>We have send an Email to all the location you selected.
+                    <p>The one that has your lost item will reply you soon!</p>
+                </h2>
+            </div>
+        </>
+    )
 }
+
+export default SubmitMessage

@@ -1,5 +1,6 @@
 import { useState } from "react"
 import axios from "axios"
+import { Link } from "react-router-dom"
 
 const API_URL = process.env.REACT_APP_SERVER_URL || "http://localhost:1000"
 
@@ -32,7 +33,8 @@ function Login() {
       <label>Password:</label>
       <input type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
 
-      <button type="submit" onClick={(e) => handleSubmit(e)}>Login</button>
+      <Link to="/submissionmessage"><button type="submit" onClick={(e) => handleSubmit(e)}>Login</button></Link>
+
       {login ? (
         <p className="text-success">You Are Logged in Successfully</p>
       ) : (
