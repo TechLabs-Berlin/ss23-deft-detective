@@ -51,23 +51,25 @@ export function When() {
                     <form onSubmit={handleSubmit}>
                         <div>
                             <p className="value">Date*</p>
-                            <label>
-                                <input
-                                    type="date"
-                                    name="date"
-                                    value={formData.date}
-                                    onChange={handleInputChange}
-                                    required
-                                />
-                                -
-                                <input
-                                    type="date"
-                                    name="date"
-                                    value={formData.date}
-                                    onChange={handleInputChange}
-                                    required
-                                />
-                            </label>
+                            <div>
+                                <label className="dateInput">
+                                    <input
+                                        type="date"
+                                        name="date"
+                                        value={formData.date}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
+                                    <span>-</span>
+                                    <input
+                                        type="date"
+                                        name="date"
+                                        value={formData.date}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
+                                </label>
+                            </div>
                         </div>
                         <p className="value">Time</p>
                         <div className="timeOption">
@@ -79,7 +81,7 @@ export function When() {
                                     checked={formData.timeOption === '12 AM - 4 AM'}
                                     onChange={handleInputChange}
                                     required
-                                /> <span className="timeOptionText">12 AM - 4 AM</span>
+                                /> <span className="timeOptionText">12-4</span>
                             </label>
                             <label>
                                 <input
@@ -89,7 +91,7 @@ export function When() {
                                     checked={formData.timeOption === '4 AM - 8 AM'}
                                     onChange={handleInputChange}
                                     required
-                                /> <span className="timeOptionText">4 AM - 8 AM</span>
+                                /> <span className="timeOptionText">4-</span>
                             </label>
                             <label>
                                 <input
@@ -99,7 +101,7 @@ export function When() {
                                     checked={formData.timeOption === '8 AM - 12 PM'}
                                     onChange={handleInputChange}
                                     required
-                                /><span className="timeOptionText">8 AM - 12 PM</span>
+                                /><span className="timeOptionText">8-12</span>
                             </label>
                             <label>
                                 <input
@@ -109,7 +111,7 @@ export function When() {
                                     checked={formData.timeOption === '12 PM - 4 PM'}
                                     onChange={handleInputChange}
                                     required
-                                /><span className="timeOptionText">12 PM - 4 PM</span>
+                                /><span className="timeOptionText">12-4</span>
                             </label>
                             <label>
                                 <input
@@ -119,7 +121,7 @@ export function When() {
                                     checked={formData.timeOption === '4 PM - 8 PM'}
                                     onChange={handleInputChange}
                                     required
-                                /><span className="timeOptionText">4 PM - 8 PM</span>
+                                /><span className="timeOptionText">4-8</span>
                             </label>
                             <label>
                                 <input
@@ -129,7 +131,7 @@ export function When() {
                                     checked={formData.timeOption === '8 PM - 12 AM'}
                                     onChange={handleInputChange}
                                     required
-                                /><span className="timeOptionText">8 PM - 12 AM</span>
+                                /><span className="timeOptionText">8-12</span>
                             </label>
                         </div>
                         <p>or</p>
@@ -147,7 +149,7 @@ export function When() {
                         </div>
                         <div className="buttons">
                             <Link to="/what"><button className="back">Back</button></Link>
-                            <Link to="/where"><button className="next" type="submit">Next</button></Link>
+                            <Link to="/where"><button className="next-2" type="submit">Next</button></Link>
                         </div>
                     </form>
                 </div>

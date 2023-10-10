@@ -65,6 +65,7 @@ export function What() {
                                     name="itemName"
                                     value={formData.itemName}
                                     onChange={handleInputChange}
+                                    placeholder="e.g. Wallet"
                                     required
                                 />
                             </label>
@@ -76,11 +77,13 @@ export function What() {
                                 name="description"
                                 value={formData.description}
                                 onChange={handleInputChange}
+                                placeholder="e.g. a red wallet with my ID card and driving license "
                                 required
                             />
                             </label>
                         </div>
                         <div>
+                            <p className="value">Add photos</p>
                             <label>
                                 <input
                                     type="file"
