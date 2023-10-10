@@ -47,7 +47,7 @@ export function When() {
                 </div>
                 <h1 className="question">When?</h1>
                 <h2 className="questiondescription">Share the occurence date and time if available, or simply provide a time frame.</h2>
-                <div className="what-information">
+                <div className="when-information">
                     <form onSubmit={handleSubmit}>
                         <div>
                             <p className="value">Date*</p>
@@ -134,7 +134,7 @@ export function When() {
                                 /><span className="timeOptionText">8-12</span>
                             </label>
                         </div>
-                        <p>or</p>
+                        <p className="or">or</p>
                         <div>
                             <label>
                                 <input

@@ -1,25 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 body {
-    text-align: center;
+
     font-family: Arial, sans-serif;
-    background: linear-gradient(180deg, #E5EAF4 0%, #F2F3F5 72.69%);
-    background-size: 100% 100%;
+    background: linear-gradient(180deg, #E5EAF4 0%, #F2F3F5 72.69%) no-repeat center center fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body.firstLastPage {
-    background: linear-gradient(180deg, #A2B6DD 2.65%, #F2F3F5 84.62%);
+    background: linear-gradient(180deg, #A2B6DD 2.65%, #F2F3F5 84.62%) no-repeat center center fixed;
 }
 
 body,
 html {
     margin: 0;
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 
@@ -138,6 +140,11 @@ h3.Home {
     align-items: center;
 }
 
+.container-arrowdots {
+    display: block;
+}
+
+
 .circlenumber-big h3 {
     font-size: 23px;
     color: white;
@@ -161,7 +168,7 @@ h3.Home {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding: 0 5rem;
+    margin: 2rem 6rem;
 }
 
 .stepscircle {
@@ -207,8 +214,12 @@ label>textarea {
     background-color: #234e78;
 }
 
+.next-2:hover {
+    background-color: #234e78;
+}
+
 .next-2 {
-    background-color: #1128654D;
+    background-color: #586ea78f;
     color: #fff;
     padding: 0.8rem 1.9rem;
     border: none;
@@ -235,16 +246,15 @@ label>textarea {
     left: 8rem;
 }
 
-
-
 .dateInput {
-    display: flex;
+    display: block;
     align-items: center;
 }
 
 .dateInput input {
     flex: 1;
     text-align: center;
+    padding: 0.6rem 1.7rem;
 }
 
 .dateInput span {
