@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import './Home.css';
 import './style.css';
 import Logo from '../images/Logo.png'
 import Arrow from '../images/arrows.png'

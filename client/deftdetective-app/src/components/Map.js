@@ -43,7 +43,7 @@ function MapPage() {
         )}
       </MapContainer>
       <div>
-        <h2>Polygon Coordinates</h2>
+        {/* <h2>Polygon Coordinates</h2> */}
         <ul>
           {polygonCoords.map((coord, index) => (
             <li key={index}>{`Lat: ${coord[0]}, Lng: ${coord[1]}`}</li>

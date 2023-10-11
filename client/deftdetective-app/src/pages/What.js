@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 import './style.css';
 import Logo from '../images/Logo.png';
-import './WhatWhenWhere.css';
 
 export function What() {
     const [formData, setFormData] = useState({
@@ -112,3 +111,5 @@ export function What() {
         </>
     )
 }
+
+

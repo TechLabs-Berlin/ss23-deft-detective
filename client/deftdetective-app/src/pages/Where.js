@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import React from 'react';
 import './style.css';
 import Logo from '../images/Logo.png';
-import './WhatWhenWhere.css';
-import './Where.css';
 import MapPage from "../components/Map";
 
 export function Where() {
