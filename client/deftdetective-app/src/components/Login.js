@@ -23,25 +23,26 @@ function Login() {
   }
 
   return (
-    <form onSubmit={(e) => handleSubmit(e)}>
+    <div className="containerQuestion" >
+      <form onSubmit={(e) => handleSubmit(e)}>
+        <h3>Login</h3>
+        <label>Email:</label>
+        <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
 
-      <h3>Login</h3>
+        <label>Password:</label>
+        <input type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
 
-      <label>Email:</label>
-      <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-
-      <label>Password:</label>
-      <input type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-
-      <Link to="/submissionmessage"><button type="submit" onClick={(e) => handleSubmit(e)}>Login</button></Link>
-
-      {login ? (
-        <p className="text-success">You Are Logged in Successfully</p>
-      ) : (
-        <p> </p>
-      )}
-    </form>
-
+        <Link to="/submissionmessage"><button type="submit" onClick={(e) => handleSubmit(e)}>Login</button></Link>
+        <div>
+          <Link to="/submitmessage"><button className="noneyet" type="submit">See last page</button></Link>
+        </div>
+        {login ? (
+          <p className="text-success">You Are Logged in Successfully</p>
+        ) : (
+          <p> </p>
+        )}
+      </form>
+    </div>
   )
 }
 

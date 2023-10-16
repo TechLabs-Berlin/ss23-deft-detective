@@ -46,12 +46,13 @@ export function When() {
                 <h1 className="question">When?</h1>
                 <h2 className="questiondescription">Share the occurence date and time if available, or simply provide a time frame.</h2>
                 <div className="when-information">
-                    <form onSubmit={handleSubmit}>
+                    <form className="inputContainer" onSubmit={handleSubmit}>
                         <div>
                             <p className="value">Date*</p>
                             <div>
                                 <label className="dateInput">
                                     <input
+                                        className="dateInput2"
                                         type="date"
                                         name="date"
                                         value={formData.date}
@@ -60,6 +61,7 @@ export function When() {
                                     />
                                     <span>-</span>
                                     <input
+                                        className="dateInput2"
                                         type="date"
                                         name="date"
                                         value={formData.date}

@@ -4,6 +4,7 @@ import axios from "axios"
 import { Link } from "react-router-dom"
 
 
+
 const API_URL = process.env.REACT_APP_SERVER_URL || "http://localhost:1000"
 
 function Register() {
@@ -26,7 +27,7 @@ function Register() {
   }
 
   return (
-    <div >
+    <div className="containerQuestion" >
       <form onSubmit={(e) => handleSubmit(e)}>
 
         <h3>Sign up</h3>
@@ -38,7 +39,7 @@ function Register() {
         <label>Password:</label>
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
 
-        <Link to="/submitmessage"><button type="submit" onClick={(e) => handleSubmit(e)}>Create my account</button></Link>
+        <Link><button type="submit" onClick={(e) => handleSubmit(e)}>Create my account</button></Link>
         {register ? (
           <p className="text-success">You Are Registered Successfully</p>
         ) : (

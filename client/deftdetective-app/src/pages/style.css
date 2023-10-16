@@ -201,6 +201,10 @@ label>textarea {
     border: 1px solid #112865;
 }
 
+.inputContainer {
+    height: 25rem;
+}
+
 .value {
     position: relative;
     right: 8.6rem;
@@ -255,6 +259,10 @@ label>textarea {
     flex: 1;
     text-align: center;
     padding: 0.6rem 1.7rem;
+    border-radius: 0.4375rem;
+    border: 1px solid #112865;
+    height: 1.5rem;
+
 }
 
 .dateInput span {
@@ -277,4 +285,19 @@ back:hover {
     margin-top: 1.4rem;
     position: relative;
     right: 5.5rem;
+}
+
+/* .Illustration {
+    display: block;
+} */
+
+.submissiondescription {
+    color: black;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 2rem 3rem;
 }

@@ -5,9 +5,9 @@ import Logo from '../images/Logo.png';
 export function Preview() {
     return (
         <>
-            <div className="container">
-                <img src={Logo} alt="Logo" className="CornerLogo" />
-                <h1>Preview</h1>
+            <img src={Logo} alt="Logo" className="CornerLogo" />
+            <div className="containerHome">
+                <h1>Report Preview</h1>
                 <Link to="/where"><button>Back</button></Link>
                 <Link to="/signup"><button>Next</button></Link>
             </div>

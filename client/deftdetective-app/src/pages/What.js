@@ -54,7 +54,7 @@ export function What() {
                 <h1 className="question">What?</h1>
                 <h2 className="questiondescription">Let us know what's missing. Be as specific as you can.</h2>
                 <div className="information">
-                    <form onSubmit={handleSubmit}>
+                    <form className="inputContainer" onSubmit={handleSubmit}>
                         <div>
                             <p className="value">Item Name*</p>
                             <label>

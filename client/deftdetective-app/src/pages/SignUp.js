@@ -5,9 +5,10 @@ import './style.css';
 export function SignUp() {
     return (
         <>
-            <div className="container">
+            <div className="containerHome">
                 <Register />
                 <Login />
+                <Link to="/submitmessage"><button className="noneyet" type="submit">See last page</button></Link>
             </div>
         </>
     )
