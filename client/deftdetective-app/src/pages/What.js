@@ -1,43 +1,42 @@
-import { Link } from "react-router-dom";
-import React, { useState } from 'react';
-import './WhatWhenWhere.css';
+import { useNavigate } from 'react-router-dom'
+import { useFormData } from './FormDataContext'
+import './WhatWhenWhere.css'
 
 export function What() {
-    const [formData, setFormData] = useState({
-        itemName: '',
-        description: '',
-        picture: null,
-    });
+    const { formData, dispatch } = useFormData()
+    const navigate = useNavigate()
 
     const handleInputChange = (event) => {
-        const { name, value } = event.target;
-        setFormData((prevData) => ({
-            ...prevData,
-            [name]: value,
-        }));
-    };
+        const { name, value } = event.target
+        dispatch({
+            type: 'UPDATE_WHAT',
+            payload: { [name]: value },
+        })
+    }
 
     const handlePictureChange = (event) => {
-        const pictureFile = event.target.files[0];
-        setFormData((prevData) => ({
-            ...prevData,
-            picture: pictureFile,
-        }));
-    };
+        const pictureFile = event.target.files[0]
+        dispatch({
+            type: 'UPDATE_WHAT',
+            payload: { picture: pictureFile },
+        })
+    }
 
     const handleSubmit = (event) => {
-        event.preventDefault();
-
+        event.preventDefault()
+    
         if (event.target.checkValidity()) {
-            // TODO: Add form submission logic, e.g., API request or database insertion
-            console.log('Form Data:', formData);
-            setFormData({
-                itemName: '',
-                description: '',
-                picture: null,
-            });
+            dispatch({
+                type: 'UPDATE_WHAT',
+                payload: {
+                    itemName: formData.whatData.itemName,
+                    description: formData.whatData.description,
+                },
+            })
+    
+            navigate('/when')
         } else {
-            console.log('Form is not valid');
+            console.log('Form is not valid')
         }
     };
 
@@ -60,7 +59,7 @@ export function What() {
                                 <input
                                     type="text"
                                     name="itemName"
-                                    value={formData.itemName}
+                                    value={formData.whatData.itemName}
                                     onChange={handleInputChange}
                                     required
                                 />
@@ -70,7 +69,7 @@ export function What() {
                             <p>Description</p>
                             <label><textarea
                                 name="description"
-                                value={formData.description}
+                                value={formData.whatData.description}
                                 onChange={handleInputChange}
                                 required
                             />
@@ -84,21 +83,9 @@ export function What() {
                                     accept="image/*"
                                     onChange={handlePictureChange}
                                 />
-                                <input
-                                    type="file"
-                                    name="picture"
-                                    accept="image/*"
-                                    onChange={handlePictureChange}
-                                />
-                                <input
-                                    type="file"
-                                    name="picture"
-                                    accept="image/*"
-                                    onChange={handlePictureChange}
-                                />
                             </label>
                         </div>
-                        <Link to="/when"><button className="next" type="submit">Next</button></Link>
+                        <button className="next" type="submit">Next</button>
                     </form>
                 </div>
             </div>

@@ -5,6 +5,8 @@ import './Where.css';
 import MapPage from "../components/Map";
 
 export function Where() {
+
+    
     return (
         <>
             <nav className="navbar"><div className="circle-navlogo"></div></nav>
