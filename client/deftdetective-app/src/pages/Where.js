@@ -5,6 +5,8 @@ import Logo from '../images/Logo.png';
 import MapPage from "../components/Map";
 
 export function Where() {
+
+    
     return (
         <>
             <img src={Logo} alt="Logo" className="CornerLogo" />

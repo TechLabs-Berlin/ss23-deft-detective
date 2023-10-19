@@ -8,8 +8,8 @@ export function Preview() {
     const { formData } = useFormData();
 
     return (
-        <>
-            <div className="container">
+      <>
+        <div className="container">
                 <img src={Logo} alt="Logo" className="CornerLogo" />
                 <h1>Preview</h1>
                 <h2>What:</h2>

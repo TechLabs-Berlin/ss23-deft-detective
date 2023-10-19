@@ -1,36 +1,38 @@
 import { Link } from "react-router-dom";
+import { useFormData } from './FormDataContext'
+import { useNavigate } from 'react-router-dom'
 import React, { useState } from 'react';
 import './style.css';
 import Logo from '../images/Logo.png';
 
+
 export function When() {
-    const [formData, setFormData] = useState({
-        date: '',
-        time: '',
-        timeOption: '',
-    });
+    const { formData, dispatch } = useFormData()
+    const navigate = useNavigate()
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
-        setFormData((prevData) => ({
-            ...prevData,
-            [name]: value,
-        }));
+        dispatch({
+            type: 'UPDATE_WHEN',
+            payload: { [name]: value },
+        })
     };
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
         if (event.target.checkValidity()) {
-            // TODO: Add form submission logic, e.g., API request or database insertion
-            console.log('Form Data:', formData);
-            setFormData({
-                date: '',
-                time: '',
-                timeOption: '',
-            });
+            dispatch({
+                type: 'UPDATE_WHEN',
+                payload: {
+                    date: formData.whenData.date,
+                    timeOption: formData.whenData.timeOption,
+                },
+            })
+    
+            navigate('/where')
         } else {
-            console.log('Form is not valid');
+            console.log('Form is not valid')
         }
     };
 
@@ -78,7 +80,7 @@ export function When() {
                                     type="radio"
                                     name="timeOption"
                                     value="12 AM - 4 AM"
-                                    checked={formData.timeOption === '12 AM - 4 AM'}
+                                    checked={formData.whenData.timeOption === '12 AM - 4 AM'}
                                     onChange={handleInputChange}
                                     required
                                 /> <span className="timeOptionText">12-4</span>
@@ -88,7 +90,7 @@ export function When() {
                                     type="radio"
                                     name="timeOption"
                                     value="4 AM - 8 AM"
-                                    checked={formData.timeOption === '4 AM - 8 AM'}
+                                    checked={formData.whenData.timeOption === '4 AM - 8 AM'}
                                     onChange={handleInputChange}
                                     required
                                 /> <span className="timeOptionText">4-</span>
@@ -98,7 +100,7 @@ export function When() {
                                     type="radio"
                                     name="timeOption"
                                     value="8 AM - 12 PM"
-                                    checked={formData.timeOption === '8 AM - 12 PM'}
+                                    checked={formData.whenData.timeOption === '8 AM - 12 PM'}
                                     onChange={handleInputChange}
                                     required
                                 /><span className="timeOptionText">8-12</span>
@@ -108,7 +110,7 @@ export function When() {
                                     type="radio"
                                     name="timeOption"
                                     value="12 PM - 4 PM"
-                                    checked={formData.timeOption === '12 PM - 4 PM'}
+                                    checked={formData.whenData.timeOption === '12 PM - 4 PM'}
                                     onChange={handleInputChange}
                                     required
                                 /><span className="timeOptionText">12-4</span>
@@ -118,7 +120,7 @@ export function When() {
                                     type="radio"
                                     name="timeOption"
                                     value="4 PM - 8 AM"
-                                    checked={formData.timeOption === '4 PM - 8 PM'}
+                                    checked={formData.whenData.timeOption === '4 PM - 8 PM'}
                                     onChange={handleInputChange}
                                     required
                                 /><span className="timeOptionText">4-8</span>
@@ -128,7 +130,7 @@ export function When() {
                                     type="radio"
                                     name="timeOption"
                                     value="8 PM - 12 AM"
-                                    checked={formData.timeOption === '8 PM - 12 AM'}
+                                    checked={formData.whenData.timeOption === '8 PM - 12 AM'}
                                     onChange={handleInputChange}
                                     required
                                 /><span className="timeOptionText">8-12</span>
@@ -141,7 +143,7 @@ export function When() {
                                     type="radio"
                                     name="timeOption"
                                     value="IDontKnow"
-                                    checked={formData.timeOption === 'IDontKnow'}
+                                    checked={formData.whenData.timeOption === "I don't Know"}
                                     onChange={handleInputChange}
                                     required
                                 /><span className="timeOptionText">I don't know</span>
@@ -149,7 +151,9 @@ export function When() {
                         </div>
                         <div className="buttons">
                             <Link to="/what"><button className="back">Back</button></Link>
-                            <Link to="/where"><button className="next-2" type="submit">Next</button></Link>
+<Link to="/where"><button className="next-2" type="submit">Next</button></Link>
+                            <button className="next" type="submit">Next</button>
+
                         </div>
                     </form>
                 </div>

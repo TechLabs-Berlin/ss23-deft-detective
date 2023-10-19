@@ -26,9 +26,6 @@ mongoose.connect("mongodb://localhost:27017/deft-detective")
 const index = require('./routes/index')
 app.use('/', index)
 
-const authRouter = require('./routes/auth.routes')
-app.use('/', authRouter)
-
 const PORT = process.env.PORT || 1000
 
 app.listen(PORT, console.log(`server listening on port ${PORT}`))

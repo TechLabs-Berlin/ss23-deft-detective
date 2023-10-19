@@ -1,5 +1,6 @@
 import './style.css';
 
+
 export function SignUp() {
     return (
         <>
