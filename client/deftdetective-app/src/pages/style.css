@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body {
+
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #E5EAF4 0%, #F2F3F5 72.69%) no-repeat center center fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body.firstLastPage {
+    background: linear-gradient(180deg, #A2B6DD 2.65%, #F2F3F5 84.62%) no-repeat center center fixed;
+}
+
+body,
+html {
+    margin: 0;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+
+h1.Home {
+    color: #000;
+    text-align: center;
+    font-family: Segoe UI;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin: 0;
+}
+
+.containerHome {
+    display: block;
+    text-align: center;
+    padding: 7rem 3rem 7rem 3rem;
+}
+
+h2.Home {
+    color: #000;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.6875rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 109.187%;
+    letter-spacing: 0.00344rem;
+    margin-top: 0;
+}
+
+h3.Home {
+    color: #000;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-block-end: 3rem;
+    margin-block-start: 4rem;
+}
+
+.Arrow {
+    position: relative;
+    left: 2.2rem;
+    top: 0.5rem;
+}
+
+.stepscircle {
+    display: flex;
+    margin: 30px 0;
+    align-items: center;
+}
+
+.lets-go-button:hover {
+    background-color: #294288;
+
+}
+
+.lets-go-button {
+    background-color: #112865;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 3rem;
+}
+
+.CornerLogo {
+    margin-right: 20rem;
+}
+
+.containerQuestion {
+    display: block;
+    text-align: center;
+    padding: 0 0.8rem;
+}
+
+.circlenumber-middle {
+    width: 50px;
+    height: 50px;
+    background-color: #7FACC6;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.circlenumber-small {
+    width: 40px;
+    height: 40px;
+    background-color: #7FACC6;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.circlenumber-big {
+    width: 70px;
+    height: 70px;
+    background-color: #112865;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.circlenumber-middle h3 {
+    font-size: 16px;
+    color: white;
+}
+
+.circlenumber-small h3 {
+    font-size: 14px;
+    color: white;
+    align-items: center;
+}
+
+.container-arrowdots {
+    display: block;
+}
+
+
+.circlenumber-big h3 {
+    font-size: 23px;
+    color: white;
+    align-items: center;
+}
+
+.question {
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.questiondescription {
+    color: black;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 2rem 6rem;
+}
+
+.stepscircle {
+    align-items: center;
+    display: inline-flex;
+    gap: 16px;
+    position: relative;
+    margin: 0.3rem 0;
+}
+
+label>input[type="text"] {
+    width: 21rem;
+    height: 1.5rem;
+    padding: 1rem 0.5rem;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    border-radius: 0.4375rem;
+    border: 1px solid #112865;
+}
+
+label>textarea {
+    width: 21rem;
+    height: 7rem;
+    padding: 1rem 0.5rem;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    border-radius: 0.4375rem;
+    border: 1px solid #112865;
+}
+
+.value {
+    position: relative;
+    right: 8.6rem;
+}
+
+.information {
+    margin-top: 2rem;
+}
+
+.next:hover {
+    background-color: #234e78;
+}
+
+.next-2:hover {
+    background-color: #234e78;
+}
+
+.next-2 {
+    background-color: #586ea78f;
+    color: #fff;
+    padding: 0.8rem 1.9rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1.4rem;
+    position: relative;
+    left: 5.2rem;
+}
+
+.next {
+    background-color: #1128654D;
+    color: #fff;
+    padding: 0.8rem 1.9rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1.4rem;
+    position: relative;
+    left: 8rem;
+}
+
+.dateInput {
+    display: block;
+    align-items: center;
+}
+
+.dateInput input {
+    flex: 1;
+    text-align: center;
+    padding: 0.6rem 1.7rem;
+}
+
+.dateInput span {
+    margin: 0 5px;
+}
+
+back:hover {
+    background-color: #234e78;
+}
+
+.back {
+    background-color: #1128654D;
+    color: #fff;
+    padding: 0.8rem 1.9rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1.4rem;
+    position: relative;
+    right: 5.5rem;
+}

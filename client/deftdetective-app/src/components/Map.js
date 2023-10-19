@@ -22,8 +22,8 @@ function MapPage() {
   };
 
   return (
-    <div className="map" style={{ height: "500px", width: "100%" }}>
-      <MapContainer center={[52.5200, 13.4050]} zoom={13} style={{ height: "500px", width: "100%" }}>
+    <div className="map" style={{ height: "300px", width: "100%" }}>
+      <MapContainer center={[52.5200, 13.4050]} zoom={13} style={{ height: "300px", width: "100%" }}>
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         <FeatureGroup>
           <EditControl
@@ -43,7 +43,7 @@ function MapPage() {
         )}
       </MapContainer>
       <div>
-        <h2>Polygon Coordinates</h2>
+        {/* <h2>Polygon Coordinates</h2> */}
         <ul>
           {polygonCoords.map((coord, index) => (
             <li key={index}>{`Lat: ${coord[0]}, Lng: ${coord[1]}`}</li>
