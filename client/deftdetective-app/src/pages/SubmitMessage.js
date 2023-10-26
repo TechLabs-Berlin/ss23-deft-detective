@@ -6,8 +6,7 @@ export function SubmitMessage() {
     return (
 
         <>
-            <body className="containerHome">
-
+            <div className="containerHome">
                 <div className="container">
                     <img src={Logo} alt="Logo" className="LastLogo" />
                     <h1 className="question">Submitted!</h1>
@@ -16,7 +15,7 @@ export function SubmitMessage() {
                     </h2>
                     <img src={Illustration} alt="Illustration" className="Illustration" />
                 </div>
-            </body>
+            </div>
         </>
     )
 }

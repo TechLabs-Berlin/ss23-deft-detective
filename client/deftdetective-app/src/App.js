@@ -4,7 +4,7 @@ import { What } from "./pages/What"
 import { When } from "./pages/When"
 import { Where } from "./pages/Where"
 import { Preview } from "./pages/Preview"
-import { SignUp } from "./pages/SignUp"
+import { Mail } from "./pages/Mail"
 import { FormDataProvider } from './pages/FormDataContext';
 import { SubmitMessage } from "./pages/SubmitMessage"
 
@@ -17,7 +17,7 @@ function App() {
         <Route path="/when" element={<When />} />
         <Route path="/where" element={<Where />} />
         <Route path="/preview" element={<Preview />} />
-        <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/Mail" element={<Mail />} />
         <Route path="/SubmitMessage" element={<SubmitMessage />} />
       </Routes>
     </FormDataProvider>

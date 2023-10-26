@@ -28,7 +28,7 @@ export function Where() {
                         </div>
                     </form>
                 </div>
-            </div >
+            </div>
         </>
     )
 }

@@ -15,7 +15,7 @@ export function Preview() {
                     <div className="previewQuestion">
                         <h4>What</h4>
                         <div className="data">
-                            <p>{formData.whatData.itemName}</p>
+                            <p className="previewItemName">{formData.whatData.itemName}</p>
                             <p>{formData.whatData.description}</p>
                         </div>
                     </div>
@@ -32,9 +32,12 @@ export function Preview() {
                             <p></p>
                         </div>
                     </div>
+                    <div className="previewButton">
+                        <Link to="/where"><button className="back-3">Back</button></Link>
+                        <Link to="/mail"><button className="next-3">Next</button></Link>
+                    </div>
                 </div>
-                <Link to="/where"><button className="back">Back</button></Link>
-                <Link to="/signup"><button className="next-3">Next</button></Link>
+
             </div>
         </>
     );
