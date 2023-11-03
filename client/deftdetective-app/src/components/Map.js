@@ -1,6 +1,6 @@
 import "leaflet/dist/leaflet.css";
 import "leaflet-draw/dist/leaflet.draw.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   MapContainer,
   TileLayer,
@@ -8,9 +8,17 @@ import {
   FeatureGroup,
 } from "react-leaflet";
 import { EditControl } from "react-leaflet-draw";
+import axios from 'axios';
+import { useFormData } from './FormDataContext';
 
 function MapPage() {
+  const { formData, dispatch } = useFormData();
   const [polygonCoords, setPolygonCoords] = useState([]);
+  const [places, setPlaces] = useState([]);
+
+  useEffect(() => {
+    connectionToBackend();
+  }, [polygonCoords]);
 
   const handlePolygonCreated = (e) => {
     const polygon = e.layer;
@@ -21,9 +29,30 @@ function MapPage() {
     setPolygonCoords(coords);
   };
 
+  const connectionToBackend = async () => {
+    try {
+      const response = await axios.post('http://localhost:1000/coordinates', { data: polygonCoords });
+
+        if (response.status === 200) {
+          const { places: placesInsidePolygon } = response.data;
+          setPlaces(placesInsidePolygon);
+          dispatch({
+            type: 'UPDATE_WHERE',
+            payload: { places: placesInsidePolygon },
+        })
+          console.log('Data sent successfully');
+        } else {
+          console.error('Failed to send data');
+        }
+      }
+     catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
   return (
-    <div className="map" style={{ height: "300px", width: "100%" }}>
-      <MapContainer center={[52.5200, 13.4050]} zoom={13} style={{ height: "300px", width: "100%" }}>
+    <div className="map" style={{ height: "500px", width: "100%" }}>
+      <MapContainer center={[52.5200, 13.4050]} zoom={13} style={{ height: "500px", width: "100%" }}>
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         <FeatureGroup>
           <EditControl
@@ -42,14 +71,6 @@ function MapPage() {
           <Polygon positions={polygonCoords} />
         )}
       </MapContainer>
-      <div>
-        {/* <h2>Polygon Coordinates</h2> */}
-        <ul>
-          {polygonCoords.map((coord, index) => (
-            <li key={index}>{`Lat: ${coord[0]}, Lng: ${coord[1]}`}</li>
-          ))}
-        </ul>
-      </div>
     </div>
   );
 }

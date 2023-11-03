@@ -1,4 +1,4 @@
-import { useFormData } from './FormDataContext';
+import { useFormData } from '../components/FormDataContext';
 import { Link } from "react-router-dom"
 import './style.css';
 import Logo from '../images/Logo.png';
@@ -29,7 +29,12 @@ export function Preview() {
                     <div className="previewQuestion">
                         <h4>Where</h4>
                         <div>
-                            <p></p>
+                             {formData.whereData.places.map((place, index) => (
+                                <div>
+                                    <p><strong>Business Name:</strong> {place.biz_name}</p>
+                                    <p><strong>Email:</strong> {place.email}</p>
+                                </div>
+                                ))}
                         </div>
                     </div>
                     <div className="previewButton">

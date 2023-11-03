@@ -4,11 +4,14 @@ const initialFormData = {
     whatData: {
         itemName: '',
         description: '',
-        picture: null,
+        picture: null
     },
     whenData: {
         date: '',
-        timeOption: '',
+        timeOption: ''
+    },
+    whereData: {
+        places: ''
     }
 };
 
@@ -26,6 +29,11 @@ const formDataReducer = (state, action) => {
                 ...state,
                 whenData: { ...state.whenData, ...action.payload },
             };
+        case 'UPDATE_WHERE':
+            return {
+                ...state,
+                whereData: { places: action.payload.places },
+            };
         default:
             return state;
     }
@@ -39,9 +47,8 @@ export function FormDataProvider({ children }) {
             {children}
         </FormDataContext.Provider>
     );
-}
+};
 
 export function useFormData() {
     return useContext(FormDataContext);
-}
-
+};
