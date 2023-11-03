@@ -3,22 +3,41 @@ import { Link } from "react-router-dom"
 import './style.css';
 import Logo from '../images/Logo.png';
 
-
 export function Preview() {
     const { formData } = useFormData();
 
     return (
-      <>
-        <div className="container">
+        <>
+            <div className="container">
                 <img src={Logo} alt="Logo" className="CornerLogo" />
-                <h1>Preview</h1>
-                <h2>What:</h2>
-                <p>Item Name: {formData.whatData.itemName}</p>
-                <p>Description: {formData.whatData.description}</p>
-                <p>date: {formData.whenData.date}</p>
-                <p>timeOption: {formData.whenData.timeOption}</p>
-                <Link to="/where"><button>Back</button></Link>
-                <Link to="/signup"><button>Next</button></Link>
+                <h1 className="question">Report Preview</h1>
+                <div className="previewContainer">
+                    <div className="previewQuestion">
+                        <h4>What</h4>
+                        <div className="data">
+                            <p className="previewItemName">{formData.whatData.itemName}</p>
+                            <p>{formData.whatData.description}</p>
+                        </div>
+                    </div>
+                    <div className="previewQuestion">
+                        <h4>When</h4>
+                        <div className="data">
+                            <p>{formData.whenData.date}</p>
+                            <p>{formData.whenData.timeOption}</p>
+                        </div>
+                    </div>
+                    <div className="previewQuestion">
+                        <h4>Where</h4>
+                        <div>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div className="previewButton">
+                        <Link to="/where"><button className="back-3">Back</button></Link>
+                        <Link to="/mail"><button className="next-3">Next</button></Link>
+                    </div>
+                </div>
+
             </div>
         </>
     );

@@ -6,7 +6,6 @@ import MapPage from "../components/Map";
 
 export function Where() {
 
-    
     return (
         <>
             <img src={Logo} alt="Logo" className="CornerLogo" />
@@ -19,15 +18,17 @@ export function Where() {
                 <h1 className="question">Where?</h1>
                 <h2 className="questiondescription">Provide the location of the incident.</h2>
                 <div className="informarion">
-                    <form className="inputContainer">
-                        <MapPage />
-                        <div className="buttons">
-                            <Link to="/when"><button className="back">Back</button></Link>
-                            <Link to="/preview"><button className="next-2" type="submit">Done</button></Link>
+                    <form>
+                        <div className="inputContainer">
+                            <MapPage />
+                            <div className="buttons">
+                                <Link to="/when"><button className="back">Back</button></Link>
+                                <Link to="/preview"><button className="next-2" type="submit">Done</button></Link>
+                            </div>
                         </div>
                     </form>
                 </div>
-            </div >
+            </div>
         </>
     )
 }
