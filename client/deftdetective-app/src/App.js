@@ -5,7 +5,7 @@ import { When } from "./pages/When"
 import { Where } from "./pages/Where"
 import { Preview } from "./pages/Preview"
 import { Mail } from "./pages/Mail"
-import { FormDataProvider } from './pages/FormDataContext';
+import { FormDataProvider } from './components/FormDataContext';
 import { SubmitMessage } from "./pages/SubmitMessage"
 
 function App() {
