@@ -7,8 +7,9 @@ const initialFormData = {
         picture: null
     },
     whenData: {
-        date: '',
-        timeOption: ''
+        date1: '',
+        date2: '',
+        timeOption: '',
     },
     whereData: {
         places: ''

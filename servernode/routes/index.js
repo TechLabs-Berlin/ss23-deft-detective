@@ -26,14 +26,12 @@ const isPointInsidePolygon = (point, polygon) => {
       isInside = !isInside;
     }
   }
-  console.log("places", isInside)
   return isInside;
 };
 
 router.post('/coordinates', async (req, res) => {
   try {
     const { data } = req.body;
-    console.log('Received userPolygon:', data)
 
     if (!data || !Array.isArray(data)) {
       res.status(400).json({ error: 'Invalid user-defined polygon' });

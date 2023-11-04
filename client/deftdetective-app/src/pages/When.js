@@ -25,7 +25,8 @@ export function When() {
             dispatch({
                 type: 'UPDATE_WHEN',
                 payload: {
-                    date: formData.whenData.date,
+                    date1: formData.whenData.date1,
+                    date2: formData.whenData.date2,
                     timeOption: formData.whenData.timeOption,
                 },
             })
@@ -57,8 +58,8 @@ export function When() {
                                         <input
                                             className="dateInput2"
                                             type="date"
-                                            name="date"
-                                            value={formData.date}
+                                            name="date1"
+                                            value={formData.date1}
                                             onChange={handleInputChange}
                                             required
                                         />
@@ -66,8 +67,8 @@ export function When() {
                                         <input
                                             className="dateInput2"
                                             type="date"
-                                            name="date"
-                                            value={formData.date}
+                                            name="date2"
+                                            value={formData.date2}
                                             onChange={handleInputChange}
                                             required
                                         />
