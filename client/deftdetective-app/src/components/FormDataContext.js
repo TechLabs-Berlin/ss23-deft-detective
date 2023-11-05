@@ -12,7 +12,7 @@ const initialFormData = {
         timeOption: '',
     },
     whereData: {
-        places: ''
+        places: []
     }
 };
 

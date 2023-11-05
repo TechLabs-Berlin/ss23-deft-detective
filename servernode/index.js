@@ -14,7 +14,7 @@ const mongoose = require('mongoose');
 require("dotenv").config();
 
 mongoose.connect("mongodb://localhost:27017/deft-detective")
-.then((x) => {
+  .then((x) => {
     const dbName = x.connections[0].name;
     console.log(`Connected to Mongo! Database name: "${dbName}"`);
   })

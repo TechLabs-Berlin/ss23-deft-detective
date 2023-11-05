@@ -11,8 +11,14 @@ Basic requirements:
 Code editors (VS Code, Atom...)
 Node.js
 React
+MongoDB
 Nodemon (optional)
- 
+
+
+Data
+
+Create a data base and a collection with the name 'deft-detective' with the biz_name.csv file (found in the data folder).
+
 
 Client
 
@@ -53,6 +59,10 @@ $ node index.js
 or
 
 $ nodemon index.js
+
+(If the server is still not running:
+change index.js:16 'mongoose.connect("mongodb://localhost:27017/deft-detective") 
+to mongoose.connect("mongodb://127.0.0.1:27017/deft-detective"))
 
 Run the client:
 
