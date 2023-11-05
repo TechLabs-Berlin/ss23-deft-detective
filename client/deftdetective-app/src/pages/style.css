@@ -21,7 +21,6 @@ body,
 html {
     margin: 0;
     height: 100%;
-    /* overflow: hidden; */
 }
 
 h1.Home {
@@ -434,4 +433,38 @@ input[type="email"] {
 
 img {
     max-width: 200px;
+}
+
+
+.error {
+    color: rgb(112, 12, 12);
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 2rem 6rem;
+}
+
+img {
+    object-fit: cover;
+    width: 80px;
+    height: 80px;
+}
+
+.whatcolumn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.deleteButton {
+    background-color: #112865;
+    color: #fff;
+    padding: 0.5rem 0.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }

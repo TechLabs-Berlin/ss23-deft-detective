@@ -14,7 +14,11 @@ After about four weeks Quyen announced her departure and we welcomed Guihelme as
 The UX team presented two prototypes with two alternatives to determinate the area the item was lost in: Radius-based area selection (designed by Vida) and draw-based area selection (designed by Rosaria). To identify the best practice they launched a A/B test using Maze. Based on the outcome of the test we decided to go on with the draw-based area selection, where the user can draw a polygon directly on the map.  
 
 Guihelme  took care of the Berlin map with the polygon drawn in it, from which the coordinates are from, and log in the user. Date Science continued to have problems bridging the gap between the map, the store and its email.
-After some UI consideration on colour palettes and logo, the UX showed the finished framework in color and Ajla then took care of the coding in the frontend. Via Figma, individual properties such as color and text type could be adopted. But the majority was developed freely without further frameworks like Bootstrap. The path is considered successful from start to finish, but does not send any data to the backend. 
-There are difficulties on Github in merging the server and client side after working from the front-end and back-end. As of now, the coordinates of the polygon are displayed. The login also works but still needs to be updated on Github.
+After some UI consideration on colour palettes and logo, the UX showed the finished framework in color and Ajla then took care of the coding in the frontend. Via Figma, individual properties such as color and text type could be adopted. But the majority was developed freely without further frameworks like Bootstrap. The path was considered successful from start to finish, but does not send any data to the backend at this point. 
+There were difficulties on Github in merging the server and client side after working from the front-end and back-end. At this time, the coordinates of the polygon were displayed. The login also worked but we choose to go only for the user's e-mail.
 
 In general the communication in the team during the project phase was good and all the techies were committed. Unfortunately lately it became harder due to some difficulties on the part of the DS to solve some issues in their tasks so the team cohesion has been a bit lacking to not existing, which ended in the extension of the submission date for Ajla and Guilherme.
+
+The further communication between Guilherme and Ajla was good. Both of them worked hard to finally finish the project. Guilherme finally archieved to run the app with a database of buisnesses Zubin has send him. Ajla styled everything to keep it beautiful for the user, taking the Figma design as example. 
+
+Thank you very much.

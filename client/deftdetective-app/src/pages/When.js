@@ -1,27 +1,30 @@
 import { Link } from "react-router-dom";
-import { useFormData } from '../components/FormDataContext'
-import { useNavigate } from 'react-router-dom'
+import { useFormData } from '../components/FormDataContext';
+import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import './style.css';
 import Logo from '../images/Logo.png';
 
-
 export function When() {
-    const { formData, dispatch } = useFormData()
-    const navigate = useNavigate()
+    const { formData, dispatch } = useFormData();
+    const navigate = useNavigate();
+
+    const [dateError, setDateError] = useState('');
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
         dispatch({
             type: 'UPDATE_WHEN',
             payload: { [name]: value },
-        })
+        });
     };
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        const date1 = new Date(formData.whenData.date1);
+        const date2 = new Date(formData.whenData.date2);
 
-        if (event.target.checkValidity()) {
+        if (date1.getFullYear() >= 2023 && date2.getFullYear() >= 2023 && date1 <= date2) {
             dispatch({
                 type: 'UPDATE_WHEN',
                 payload: {
@@ -29,11 +32,10 @@ export function When() {
                     date2: formData.whenData.date2,
                     timeOption: formData.whenData.timeOption,
                 },
-            })
-
-            navigate('/where')
+            });
+            navigate('/where');
         } else {
-            console.log('Form is not valid')
+            setDateError('Please select valid dates: The first date should be before the second date and both should be in 2023.');
         }
     };
 
@@ -47,7 +49,7 @@ export function When() {
                     <div className="circlenumber-small"><h3>3</h3></div>
                 </div>
                 <h1 className="question">When?</h1>
-                <h2 className="questiondescription">Share the occurence date and time if available, or simply provide a time frame.</h2>
+                <h2 className="questiondescription">Share the occurrence date and time if available, or simply provide a time frame.</h2>
                 <div className="when-information">
                     <form onSubmit={handleSubmit}>
                         <div className="inputContainer">
@@ -59,7 +61,7 @@ export function When() {
                                             className="dateInput2"
                                             type="date"
                                             name="date1"
-                                            value={formData.date1}
+                                            value={formData.whenData.date1}
                                             onChange={handleInputChange}
                                             required
                                         />
@@ -68,13 +70,14 @@ export function When() {
                                             className="dateInput2"
                                             type="date"
                                             name="date2"
-                                            value={formData.date2}
+                                            value={formData.whenData.date2}
                                             onChange={handleInputChange}
                                             required
                                         />
                                     </label>
                                 </div>
                             </div>
+                            {dateError && <p className="error">{dateError}</p>}
                             <p className="value">Time</p>
                             <div className="timeOption">
                                 <label className="radio-button">
@@ -158,11 +161,7 @@ export function When() {
                         </div>
                     </form>
                 </div>
-
-            </div >
+            </div>
         </>
-    )
+    );
 }
-
-
-
